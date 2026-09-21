@@ -3,9 +3,9 @@
 This is a simple and flexible particle simulation library written in C. It prioritizes user-customizability and control, allowing for custom particle properties, interactions, and printed information. The example animations were generated in Mathematica, using the programs in the examples folder.
 ## Examples
 I have so far made simple 1D kinematics, n-body gravity, and force-directed network programs using this framework. Using the csv output, I animated the results of these in Mathematica, shown below:
-![Kinematics](examples/kinematics.mp4)
-![Gravity](examples/gravity.mp4)
-![Force-Directed Network](examples/network.mp4)
+<video src="examples/kinematics.mp4" autoplay loop></video>
+<video src="examples/gravity.mp4" autoplay loop></video>
+<video src="examples/network.mp4" autoplay loop></video>
 
 ## Overall Structure
 The overall structure of each program should more-or-less mirror the following:
