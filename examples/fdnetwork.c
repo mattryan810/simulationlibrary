@@ -121,9 +121,13 @@ void inertia_function (Particle *p)
 
 void damping_function (Particle *p)
 {
-	const double damping_const = 0.7;
-	p->vx *= damping_const;
-	p->vy *= damping_const;
+	double damping_const = 0.92, max_v = 200, scale_const;
+	scale_const = max_v * 2 / M_PI;
+
+	p->vx = scale_const * atan(p->vx / scale_const) * damping_const;
+	p->vy = scale_const * atan(p->vy / scale_const) * damping_const;
+	
+
 }
 
 double calc_max_v (ParticleVector *pv)
@@ -234,7 +238,7 @@ int main (void)
 
 
 	// Just populates random particles and connections to demonstrate
-	int num_of_particles = 100;
+	int num_of_particles = 12;
 	Particle p;
 	for (int i = 0; i < num_of_particles; i++)
 	{
@@ -278,3 +282,4 @@ int main (void)
 
 	return 0;
 }
+

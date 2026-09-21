@@ -9,6 +9,7 @@ int always_true(Particle **acts_on)
 
 // Should add something to check the print function for each metric actually does something. with a non-specified function i get a bus error
 // Perhaps also output formatting?
+// Also should add something for whole-system calculations (internal energy, entropy, etc.)
 void print_metrics  (MetricVector *mv, ParticleVector *pv)
 {
 	Metric* current_metric;

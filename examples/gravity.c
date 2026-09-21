@@ -53,25 +53,25 @@ int main (void)
 	// Set up particles
 	Particle p;
 
-	// p.mass = 50;
-	// p.vx = 0;
-	// p.vy = 0;
-	// p.x = 0;
-	// p.y = 0;
-	// push_Particle(&pv, &p);
+	p.mass = 5;
+	p.vx = 0;
+	p.vy = 0;
+	p.x = 0;
+	p.y = 0;
+	push_Particle(&pv, &p);
 
 	p.mass = 1;
 	p.vx = -1;
 	p.vy = 0;
 	p.x = 0;
-	p.y = 1;
+	p.y = 5;
 	push_Particle(&pv, &p);
 
-	p.mass = 2;
+	p.mass = 1;
 	p.vx = 1;
 	p.vy = 0;
 	p.x = 0;
-	p.y = -1;
+	p.y = -5;
 	push_Particle(&pv, &p);
 
 
@@ -98,7 +98,7 @@ int main (void)
 	size_to_console(Particle);
 	size_to_console(double);
 
-	for (int t = 0; t < 1000; t++)
+	for (int t = 0; t < 1100; t++)
 	{
 		print_metrics(&mv, &pv);
 		apply_forces(&fv, &pv);

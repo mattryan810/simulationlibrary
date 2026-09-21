@@ -44,7 +44,10 @@ int main (void)
 	// Populate ParticleVector
 	p.x = p.y = p.vx = p.vy = 0.00000;
 	push_Particle(&pv, &p);
-	p.vx = p.vy = 2.00000;
+	p.vx = p.vy = 12.00000;
+	push_Particle(&pv,&p);
+	p.vx = -9.00000;
+	p.vy = 20;
 	push_Particle(&pv,&p);
 
 	// Populate ForceVector
@@ -65,7 +68,7 @@ int main (void)
 
 
 	// for each time step
-	for (int t = 0; t < 100; t++ )
+	for (int t = 0; t < 101; t++ )
 	{
 		
 
